@@ -3,7 +3,7 @@ wow you're actually reading this (might as well give you the commands you can us
 
 
 ## /meow
-Makes the bot meow. whichever meow you get is random
+Makes the bot meow. whichever meow you get is random (this includes the amount of `w`s you get)
 ## /console
 Find some secret console commands to execute. Some require special permissions :3
 ## /vocaloid

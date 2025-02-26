@@ -10,3 +10,4 @@ Find some secret console commands to execute. Some require special permissions :
 Gives you a random vocaloid song the bot has saved. More will be added if I can collect them.
 
 ## more commands coming soon
+

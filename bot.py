@@ -73,7 +73,7 @@ async def on_ready():
 @bot.tree.command(name="console", description="might have some secret commands")
 @app_commands.describe(message="enter smth")
 async def echo(interaction: discord.Interaction, message: str):
-    if await is_developer(interaction) or "it feels so adorable seeing abbie and rayney being gay <3" in message:
+    if await is_developer(interaction) or "shhhhhhh find it yourself (writing this out won't work)" in message:
         await interaction.response.send_message("hehehe ;3", ephemeral=True)
         await interaction.channel.send(message)
     else:

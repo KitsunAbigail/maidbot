@@ -8,3 +8,4 @@ Makes the bot meow. whichever meow you get is random (this includes the amount o
 Find some secret console commands to execute. Some require special permissions :3
 ## /vocaloid
 Gives you a random vocaloid song the bot has saved. More will be added if I can collect them.
+

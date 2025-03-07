@@ -46,14 +46,13 @@ async def meow(interaction: discord.Interaction):
     response = random.randint(1,4)
     letters = random.randint(2, 7)
 
-    if response == 1:
-        reply = "mr" + ("r" * letters) + ("p" * math.ceil((letters // 2)))
-    elif response == 2:
-        reply = "mro" + ("w" * letters)
-    elif response == 3:
-        reply = "ny" + ("a" * letters)
-    else:
-        reply = "meo" + ("w" * letters)
+    match(response):
+        case 1:
+            reply = "meow" + ("!" * letters)
+        case 2:
+            reply = "mrrp" + ("!" * letters)
+        case 3:
+            reply = "nyaa" + ("!" * letters)
     await interaction.response.send_message(reply)
 
 @bot.event

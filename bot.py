@@ -48,11 +48,13 @@ async def meow(interaction: discord.Interaction):
 
     match(response):
         case 1:
-            reply = "meow" + ("!" * letters)
+            reply = "meow" + ("w" * (letters // 2)) + ("!" * letters)
         case 2:
-            reply = "mrrp" + ("!" * letters)
+            reply = "mrrp" + ("p" * (letters // 2)) + ("!" * letters)
         case 3:
-            reply = "nyaa" + ("!" * letters)
+            reply = "nyaa" + ("a" * (letters // 2)) + ("!" * letters)
+        case 4:
+            reply = "mrow" + ("w" * (letters // 2)) + ("!" * letters)
     await interaction.response.send_message(reply)
 
 @bot.event
@@ -72,7 +74,7 @@ async def on_ready():
 @bot.tree.command(name="console", description="might have some secret commands")
 @app_commands.describe(message="enter smth")
 async def echo(interaction: discord.Interaction, message: str):
-    if await is_developer(interaction) or "shhhhhhh find it yourself (writing this out won't work)" in message:
+    if await is_developer(interaction) in message:
         await interaction.response.send_message("hehehe ;3", ephemeral=True)
         await interaction.channel.send(message)
     else:

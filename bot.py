@@ -21,7 +21,7 @@ TOKEN = os.getenv('hahaha you thought you would get the actual token for the bot
 APPLICATION_ID = os.getenv('hahaha you thought you would get the actual token for the bot')
 
 bot = commands.Bot(command_prefix="🍰", intents=intents, application_id=APPLICATION_ID)
-developer_id = pretendthisismyid  # Replace with your own user ID
+developer_id = pretendthisismyid  # type: ignore # Replace with your own user ID
 
 # Check if the user is the developer
 async def is_developer(interaction: discord.Interaction):
@@ -57,14 +57,13 @@ async def meow(interaction: discord.Interaction):
 
 @bot.event
 async def on_ready():
-
-    print(f'{bot.user} has connected to Discord!')
+    logging.info(f"Logged in as {bot.user} at {datetime.now()}")
     await bot.tree.sync()
 
     # Only sync commands for the developer
     if bot.user.id == developer_id:
         await bot.tree.sync()
-        print("Commands have been synced.")
+        logging.info("Commands synced")
 
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="VOCALOID music ^w^"))
 

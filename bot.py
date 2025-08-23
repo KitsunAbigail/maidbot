@@ -36,7 +36,6 @@ async def is_developer(interaction: discord.Interaction):
 async def on_message(message):
     if message.author == bot.user:
         return
-
     if message.content == 'haii maidbot':
         await message.channel.send('haii!! ^w^', reference=message)
 

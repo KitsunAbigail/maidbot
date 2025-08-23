@@ -2,12 +2,6 @@
 import os
 import random
 import math
-import time
-import logging
-import traceback
-from datetime import datetime
-from tkinter import messagebox
-
 import discord
 from discord.ext import commands
 from discord.app_commands import CommandInvokeError
